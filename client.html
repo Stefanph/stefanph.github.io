@@ -1,0 +1,351 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- External CSS -->
+  <link rel="stylesheet" type="text/css" href="client.css">
+  <!-- Google Auth -->
+  <script src="https://www.gstatic.com/firebasejs/ui/4.5.0/firebase-ui-auth__sv.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.5.0/firebase-ui-auth.css" />
+  <title>Parkio | Lättare parkering</title>
+</head>
+
+<body>
+
+
+
+
+
+
+  <section id="start">
+    <div class="content_container">
+      <nav class="navbar">
+        <a class="navbar-brand" href="#">
+          <img src="logo.svg" width="200" height="61" alt="">
+        </a>
+        <a class="nav-link link" href="#hem">Hem<span class="sr-only"></span></a>
+        <a class="nav-link link" href="#om">OM</a>
+        <a class="nav-link link" href="#appen">HUR FUNKAR DET?</a>
+        <a class="nav-link link" href="#funkar">KONTAKT</a>
+      </nav>
+      <h1 id="header" class="header">
+        Parka lättare och tjäna feta stålar
+      </h1>
+      <h2 id="header_under">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </h2>
+      <div id="button_div">
+        <button type="button" id="header_button_1">Ladda ner appen</button>
+        <button type="button" id="header_button_2">Upptäck mer</button>
+      </div>
+    </div>
+    <button type="button" class="button" id="register_button" data-toggle="modal" data-target="#myModal">Registrera dig</button>
+    <section class="half_circle_left"></section>
+    <section class="wave">
+    </section>
+  </section>
+
+  <div class="div_wave">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="wave" id="wave_1">
+      <path id="wave_1_path" d="M-8.74,109.03 C89.45,-98.19 384.02,215.63 500.00,49.98 L501.97,-3.45 L-9.31,-8.38 Z">
+      </path>
+    </svg>
+
+  </div>
+
+  <section id="range_bar">  
+    <h2 id="range_header" class="avsnitt_header">
+    Tjäna pengar som en Parkio-värd  
+    </h2>  
+    <h3 id="range_under_header" class="under_header">Få reda på vad du kan tjäna</h3>
+    
+    
+    
+    <div class="slider_container">
+      <h3 class="slider_header">Antal timmar per dag</h3>
+      <input type="range" min="1" max="24" value="12" class="slider" id="hour_range" oninput="showVal_1(this.value)">
+      <h4 class="range_first_value">0 timmar per dag</h4> 
+      <h4 class="range_last_value">24 timmar per dag</h4>
+      <div class="value_div">
+        <h3 id="hour_val">Antal timmar per dag:
+           <p id="show_user_1"></p> 
+      </h3>
+    </div>
+    </div>
+  
+    <div class="slider_container">
+      <h3 class="slider_header">Antal dagar per månad </h3>
+      <input type="range" min="1" max="31" value="15" class="slider" id="day_range" oninput="showVal_2(this.value)">
+    <h4 class="range_first_value">0 dagar per månad</h4> 
+    <h4 class="range_last_value">30 dagar per månad</h4>   
+    <div class="value_div">
+      <h3 id="day_val">Antal dagar per månad:       
+        <p id="show_user_2"></p>
+    </h3>
+  </div>
+      </div>
+    <h3>Vad du kan tjäna per månad</h3>
+    <h3 id="tot">Totalt:     <p id="show_user_3"></p>
+    </h3>
+  </section>
+
+
+
+
+  <section id="om">
+    <div class="om_container content_container">
+      <h2 id="om_header" class="avsnitt_header">
+        OM PARKIO
+      </h2>
+      <h3 id="om_under_header" class="under_header">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua
+      </h3>
+      <h3 id="om_text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et.Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit, sed
+      </h3>
+      <div id="button_div">
+        <button type="button" id="header_button_1">Läs mer</button>
+      </div>
+    </div>
+    <section class="half_circle_right"></section>
+  </section>
+
+
+
+  <section id="ladda_ner">
+
+    <img src="ladda_ner_appen_bild.svg" id="ladda_ner_appen_bild" alt="">
+    <div id="tint">
+      <h2 id="ladda_ner_header">Ladda ner appen nu</h2>
+      <div id="button_div_ladda_ner">
+        <button type="button" class="ladda_ner_button" id="ladda_ner_1"></button>
+        <button type="button" class="ladda_ner_button" id="ladda_ner_2"></button>
+      </div>
+    </div>
+    </div>
+
+
+  </section>
+
+
+  <section id="appen">
+    <div class="appen_container content_container">
+      <h2 id="appen_header" class="avsnitt_header">
+        Appen
+      </h2>
+      <h3 id="appen_under_header" class="under_header">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua
+      </h3>
+      <img src="appen_bild.svg" id="appen_bild">
+    </div>
+  </section>
+
+
+
+  <section id="funktioner">
+    <div class="funktioner_container content_container">
+      <h2 id="funktioner_header" class="avsnitt_header">Funktioner</h2>
+      <h3 id="funktioner_under_header" class="under_header">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua
+      </h3>
+      <div class="funktioner_container_small">
+        <div id="background_funktion_1" class="background_funktion">
+          <div id="funktion_1" class="funktion">
+            <div id="icon_funktion_1">
+              <img src="icon_funktion_1.svg" class="icon_funktion" width=40px height=40px alt="">
+            </div>
+            <h4 id="header_funktion_1" class="header_funktion">Unique Design</h4>
+            <p id="paragraph_funktion_1" class="paragraph_funktion">Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua
+            </p>
+          </div>
+        </div>
+        <div id="background_funktion_2" class="background_funktion">
+          <div id="funktion_2" class="funktion">
+            <div id="icon_funktion_2">
+              <img src="icon_funktion_2.svg" class="icon_funktion" width=40px height=40px alt="">
+            </div>
+            <h4 id="header_funktion_2" class="header_funktion">Unique Design</h4>
+            <p id="paragraph_funktion_2" class="paragraph_funktion">Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua
+            </p>
+          </div>
+        </div>
+        <div id="background_funktion_3" class="background_funktion">
+          <div id="funktion_3" class="funktion">
+            <div id="icon_funktion_3">
+              <img src="icon_funktion_3.svg" class="icon_funktion" width=40px height=40px alt="">
+            </div>
+            <h4 id="header_funktion_3" class="header_funktion">Unique Design</h4>
+            <p id="paragraph_funktion_3" class="paragraph_funktion">Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="funktioner_container_small">
+        <div id="background_funktion_1" class="background_funktion">
+          <div id="funktion_1" class="funktion">
+            <div id="icon_funktion_1">
+              <img src="icon_funktion_4.svg" class="icon_funktion" width=40px height=40px alt="">
+            </div>
+            <h4 id="header_funktion_1" class="header_funktion">Unique Design</h4>
+            <p id="paragraph_funktion_1" class="paragraph_funktion">Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua
+            </p>
+          </div>
+        </div>
+        <div id="background_funktion_2" class="background_funktion">
+          <div id="funktion_2" class="funktion">
+            <div id="icon_funktion_2">
+              <img src="icon_funktion_5.svg" class="icon_funktion" width=40px height=40px alt="">
+            </div>
+            <h4 id="header_funktion_2" class="header_funktion">Unique Design</h4>
+            <p id="paragraph_funktion_2" class="paragraph_funktion">Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua
+            </p>
+          </div>
+        </div>
+        <div id="background_funktion_3" class="background_funktion">
+          <div id="funktion_3" class="funktion">
+            <div id="icon_funktion_3">
+              <img src="icon_funktion_6.svg" class="icon_funktion" width=40px height=40px alt="">
+            </div>
+            <h4 id="header_funktion_3" class="header_funktion">Unique Design</h4>
+            <p id="paragraph_funktion_3" class="paragraph_funktion">Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="fungerar">
+    <div class="fungerar_container content_container">
+      <h2 id="fungerar_header" class="avsnitt_header">
+        Hur fungerar appen?
+      </h2>
+      <h3 id="fungerar_under_header" class="under_header">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua
+      </h3>
+      <img src="hur_fungerar_bild.svg" id="hur_fungerar_bild" alt="">
+    </div>
+  </section>
+  <section id="kontakta">
+
+    <div class="kontakta_container content_container">
+      <h2 id="kontakta_header" class="avsnitt_header">
+        Kontakta oss
+      </h2>
+      <h3 id="kontakta_under_header" class="under_header">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      </h3>
+      <form id="form">
+        <div id="fragor">Om du har några frågor, <br>skicka ett meddelande!</div>
+        <div>
+          <input type="text" class="form-control" id="form_name" placeholder="Namn">
+        </div>
+        <div>
+          <input type="text" class="form-control" id="form_email" placeholder="Email">
+        </div>
+        <div>
+          <textarea type="text" style="overflow:hidden" id="form_message" rows="5" class="form-control"
+            placeholder="Ditt meddelande"></textarea>
+        </div>
+      </form>
+      <button type="submit" class="btn btn-primary" id="send_message_button">Skicka meddelande</button>
+    </div>
+  </section>
+  <section id="footer">
+
+  </section>
+  <section id="footer_fot">
+  </section>
+
+
+
+  <!-- The Modal -->
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="modal_top">
+            <h3>Land/region</h3>  
+            <select data-testid="login-signup-countrycode" class="_j0zjwn" id="country"><option value="46SE">Sverige (+46)</option><option value="93AF">Afghanistan (+93)</option><option value="355AL">Albanien (+355)</option><option value="213DZ">Algeriet (+213)</option><option value="1VI">Amerikanska Jungfruöarna (+1)</option><option value="1AS">Amerikanska Samoa (+1)</option><option value="376AD">Andorra (+376)</option><option value="244AO">Angola (+244)</option><option value="1AI">Anguilla (+1)</option><option value="1AG">Antigua och Barbuda (+1)</option><option value="54AR">Argentina (+54)</option><option value="374AM">Armenien (+374)</option><option value="297AW">Aruba (+297)</option><option value="61AU">Australien (+61)</option><option value="994AZ">Azerbajdzjan (+994)</option><option value="1BS">Bahamas (+1)</option><option value="973BH">Bahrain (+973)</option><option value="880BD">Bangladesh (+880)</option><option value="1BB">Barbados (+1)</option><option value="32BE">Belgien (+32)</option><option value="501BZ">Belize (+501)</option><option value="229BJ">Benin (+229)</option><option value="1BM">Bermuda (+1)</option><option value="975BT">Bhutan (+975)</option><option value="591BO">Bolivia (+591)</option><option value="599BQ">Bonaire, Sint Eustatius och Saba (+599)</option><option value="387BA">Bosnien och Hercegovina (+387)</option><option value="267BW">Botswana (+267)</option><option value="55BR">Brasilien (+55)</option><option value="1VG">Brittiska Jungfruöarna (+1)</option><option value="246IO">Brittiska Indiska oceanöarna (+246)</option><option value="673BN">Brunei (+673)</option><option value="359BG">Bulgarien (+359)</option><option value="226BF">Burkina Faso (+226)</option><option value="257BI">Burundi (+257)</option><option value="1KY">Caymanöarna (+1)</option><option value="236CF">Centralafrikanska republiken (+236)</option><option value="56CL">Chile (+56)</option><option value="57CO">Colombia (+57)</option><option value="242CG">Kongo (+242)</option><option value="682CK">Cooköarna (+682)</option><option value="506CR">Costa Rica (+506)</option><option value="599CW">Curaçao (+599)</option><option value="357CY">Cypern (+357)</option><option value="45DK">Danmark (+45)</option><option value="243CD">Demokratiska Republiken Kongo (+243)</option><option value="253DJ">Djibouti (+253)</option><option value="1DM">Dominica (+1)</option><option value="1DO">Dominikanska republiken (+1)</option><option value="593EC">Ecuador (+593)</option><option value="20EG">Egypten (+20)</option><option value="240GQ">Ekvatorialguinea (+240)</option><option value="503SV">El Salvador (+503)</option><option value="225CI">Elfenbenskusten (+225)</option><option value="291ER">Eritrea (+291)</option><option value="372EE">Estland (+372)</option><option value="251ET">Etiopien (+251)</option><option value="500FK">Falklandsöarna (+500)</option><option value="679FJ">Fiji (+679)</option><option value="63PH">Filippinerna (+63)</option><option value="358FI">Finland (+358)</option><option value="33FR">Frankrike (+33)</option><option value="594GF">Franska Guyana (+594)</option><option value="689PF">Franska Polynesien (+689)</option><option value="298FO">Färöarna (+298)</option><option value="971AE">Förenade Arabemiraten (+971)</option><option value="241GA">Gabon (+241)</option><option value="220GM">Gambia (+220)</option><option value="995GE">Georgien (+995)</option><option value="233GH">Ghana (+233)</option><option value="350GI">Gibraltar (+350)</option><option value="30GR">Grekland (+30)</option><option value="1GD">Grenada (+1)</option><option value="299GL">Grönland (+299)</option><option value="590GP">Guadeloupe (+590)</option><option value="1GU">Guam (+1)</option><option value="502GT">Guatemala (+502)</option><option value="44GG">Guernsey (+44)</option><option value="224GN">Guinea (+224)</option><option value="245GW">Guinea-Bissau (+245)</option><option value="592GY">Guyana (+592)</option><option value="509HT">Haiti (+509)</option><option value="504HN">Honduras (+504)</option><option value="852HK">Hongkong (+852)</option><option value="91IN">Indien (+91)</option><option value="62ID">Indonesien (+62)</option><option value="964IQ">Irak (+964)</option><option value="353IE">Irland (+353)</option><option value="354IS">Island (+354)</option><option value="44IM">Isle of Man (+44)</option><option value="972IL">Israel (+972)</option><option value="39IT">Italien (+39)</option><option value="1JM">Jamaica (+1)</option><option value="81JP">Japan (+81)</option><option value="967YE">Jemen (+967)</option><option value="44JE">Jersey (+44)</option><option value="962JO">Jordanien (+962)</option><option value="61CX">Julön (+61)</option><option value="855KH">Kambodja (+855)</option><option value="237CM">Kamerun (+237)</option><option value="1CA">Kanada (+1)</option><option value="238CV">Kap Verde (+238)</option><option value="7KZ">Kazakstan (+7)</option><option value="254KE">Kenya (+254)</option><option value="86CN">Kina (+86)</option><option value="996KG">Kirgizistan (+996)</option><option value="686KI">Kiribati (+686)</option><option value="61CC">Kokosöarna (+61)</option><option value="269KM">Komorerna (+269)</option><option value="383XK">Kosovo (+383)</option><option value="385HR">Kroatien (+385)</option><option value="53CU">Kuba (+53)</option><option value="965KW">Kuwait (+965)</option><option value="856LA">Laos (+856)</option><option value="266LS">Lesotho (+266)</option><option value="371LV">Lettland (+371)</option><option value="961LB">Libanon (+961)</option><option value="231LR">Liberia (+231)</option><option value="218LY">Libyen (+218)</option><option value="423LI">Liechtenstein (+423)</option><option value="370LT">Litauen (+370)</option><option value="352LU">Luxemburg (+352)</option><option value="853MO">Macao (+853)</option><option value="389MK">Nordmakedonien (+389)</option><option value="261MG">Madagaskar (+261)</option><option value="265MW">Malawi (+265)</option><option value="60MY">Malaysia (+60)</option><option value="960MV">Maldiverna (+960)</option><option value="223ML">Mali (+223)</option><option value="356MT">Malta (+356)</option><option value="212MA">Marocko (+212)</option><option value="692MH">Marshallöarna (+692)</option><option value="596MQ">Martinique (+596)</option><option value="222MR">Mauretanien (+222)</option><option value="230MU">Mauritius (+230)</option><option value="262YT">Mayotte (+262)</option><option value="52MX">Mexiko (+52)</option><option value="691FM">Mikronesien (+691)</option><option value="258MZ">Moçambique (+258)</option><option value="373MD">Moldavien (+373)</option><option value="377MC">Monaco (+377)</option><option value="976MN">Mongoliet (+976)</option><option value="382ME">Montenegro (+382)</option><option value="1MS">Montserrat (+1)</option><option value="95MM">Myanmar (+95)</option><option value="264NA">Namibia (+264)</option><option value="674NR">Nauru (+674)</option><option value="31NL">Nederländerna (+31)</option><option value="977NP">Nepal (+977)</option><option value="505NI">Nicaragua (+505)</option><option value="227NE">Niger (+227)</option><option value="234NG">Nigeria (+234)</option><option value="683NU">Niue (+683)</option><option value="1MP">Nordmarianerna (+1)</option><option value="672NF">Norfolkön (+672)</option><option value="47NO">Norge (+47)</option><option value="687NC">Nya Kaledonien (+687)</option><option value="64NZ">Nya Zeeland (+64)</option><option value="968OM">Oman (+968)</option><option value="92PK">Pakistan (+92)</option><option value="680PW">Palau (+680)</option><option value="970PS">Palestinska territoriet (+970)</option><option value="507PA">Panama (+507)</option><option value="675PG">Papua Nya Guinea (+675)</option><option value="595PY">Paraguay (+595)</option><option value="51PE">Peru (+51)</option><option value="64PN">Pitcairnöarna (+64)</option><option value="48PL">Polen (+48)</option><option value="351PT">Portugal (+351)</option><option value="1PR">Puerto Rico (+1)</option><option value="974QA">Qatar (+974)</option><option value="262RE">Réunion (+262)</option><option value="40RO">Rumänien (+40)</option><option value="250RW">Rwanda (+250)</option><option value="7RU">Ryssland (+7)</option><option value="590BL">S:t Barthélemy (+590)</option><option value="290SH">S:t Helena (+290)</option><option value="1KN">S:t Kitts och Nevis (+1)</option><option value="1LC">S:t Lucia (+1)</option><option value="508PM">S:t Pierre och Miquelon (+508)</option><option value="1VC">S:t Vincent och Grenadinerna (+1)</option><option value="590MF">S:t Martin (+590)</option><option value="677SB">Salomonöarna (+677)</option><option value="685WS">Samoa (+685)</option><option value="378SM">San Marino (+378)</option><option value="239ST">São Tomé och Príncipe (+239)</option><option value="966SA">Saudiarabien (+966)</option><option value="41CH">Schweiz (+41)</option><option value="221SN">Senegal (+221)</option><option value="381RS">Serbien (+381)</option><option value="248SC">Seychellerna (+248)</option><option value="232SL">Sierra Leone (+232)</option><option value="65SG">Singapore (+65)</option><option value="1SX">S:t Martin (nederländska delen) (+1)</option><option value="421SK">Slovakien (+421)</option><option value="386SI">Slovenien (+386)</option><option value="252SO">Somalia (+252)</option><option value="34ES">Spanien (+34)</option><option value="94LK">Sri Lanka (+94)</option><option value="44GB">Storbritannien (+44)</option><option value="249SD">Sudan (+249)</option><option value="597SR">Surinam (+597)</option><option value="47SJ">Svalbard och Jan Mayen (+47)</option><option value="46SE">Sverige (+46)</option><option value="268SZ">Swaziland (+268)</option><option value="27ZA">Sydafrika (+27)</option><option value="500GS">Sydgeorgien och Sydsandwichöarna (+500)</option><option value="82KR">Sydkorea (+82)</option><option value="211SS">Sydsudan (+211)</option><option value="992TJ">Tadzjikistan (+992)</option><option value="886TW">Taiwan (+886)</option><option value="255TZ">Tanzania (+255)</option><option value="235TD">Tchad (+235)</option><option value="66TH">Thailand (+66)</option><option value="420CZ">Tjeckien (+420)</option><option value="228TG">Togo (+228)</option><option value="690TK">Tokelau (+690)</option><option value="676TO">Tonga (+676)</option><option value="1TT">Trinidad och Tobago (+1)</option><option value="216TN">Tunisien (+216)</option><option value="90TR">Turkiet (+90)</option><option value="993TM">Turkmenistan (+993)</option><option value="1TC">Turks- och Caicosöarna (+1)</option><option value="688TV">Tuvalu (+688)</option><option value="49DE">Tyskland (+49)</option><option value="256UG">Uganda (+256)</option><option value="380UA">Ukraina (+380)</option><option value="36HU">Ungern (+36)</option><option value="598UY">Uruguay (+598)</option><option value="1US">USA (+1)</option><option value="998UZ">Uzbekistan (+998)</option><option value="678VU">Vanuatu (+678)</option><option value="379VA">Vatikanstaten (+379)</option><option value="58VE">Venezuela (+58)</option><option value="84VN">Vietnam (+84)</option><option value="375BY">Vitryssland (+375)</option><option value="212EH">Västsahara (+212)</option><option value="681WF">Wallis- och Futunaöarna (+681)</option><option value="260ZM">Zambia (+260)</option><option value="263ZW">Zimbabwe (+263)</option><option value="358AX">Åland (+358)</option><option value="43AT">Österrike (+43)</option><option value="670TL">Östtimor (+670)</option></select>
+            <br>
+            <label for="phone_number"></label>
+            <input type="text" id="phone_number" placeholder="Telefonnummer" name="phone_number" >
+            <p><small>Vi ringer eller SMS:ar dig för att bekräfta ditt nummer. Standardavgifter för meddelanden och data gäller.</small></p>
+            <Button>Fortsätt</Button>  
+            </div>
+            <hr>
+            <div id="modal_bottom">
+              <Button class="modal_login_button"><span class="border rounded">Fortsätt med e-post</span></Button>  <br>
+              <Button class="modal_login_button"><span class="border rounded">Fortsätt med Facebook</span></Button> <br>
+              <Button class="modal_login_button" id="googleLoginButton">Fortsätt ned Google</Button>  <br>
+              <Button class="modal_login_button"><span class="border rounded">Fortsätt med Apple</span></Button> 
+              <div id="firebaseui-auth-container"></div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <p >Har du inget konto? <a href="">Bli medlem</a></p> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  
+ 
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script defer src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+<script type="text/javascript" src="./client.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+/* 
+Sektioner och body
+*/
+
+body {
+  width: 100vw;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.content_container {
+  width: 60%;
+  margin: auto;
+}
+
+#hem {
+  color: rgb(84, 67, 137);
+  height: 70vh;
+  position: relative;
+}
+
+#start {
+  background-color: rgba(84, 67, 137, 0.45);
+  height: 75vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#om {
+  background-color: rgba(255, 255, 255, 1);
+  height: 88vh;
+  width: 100%;
+  position: relative;
+}
+
+#ladda_ner {
+  height: 35vh;
+  width: 100%;
+  position: relative;
+}
+
+#appen {
+  background-color: rgb(255, 255, 255, 1);
+  height: 80vh;
+  position: relative;
+}
+
+#funktioner {
+  background-color: rgba(84, 67, 137, 0.1);
+  height: 99vh;
+  position: relative;
+}
+
+#fungerar {
+  background-color: rgba(255, 255, 255, 1);
+  height: 101vh;
+  position: relative;
+}
+
+#kontakta {
+  background-color: rgba(84, 67, 137, 0.03);
+  height: 63vh;
+  position: relative;
+}
+
+#footer {
+  background-color: rgba(19, 37, 59, 1);
+  height: 5vh;
+  position: relative;
+}
+
+
+/* 
+Text och länkar
+*/
+
+a.link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}
+
+a.link:hover {
+  color: rgba(84, 67, 137, 1);
+}
+
+.header {
+  font-weight: bold;
+}
+
+#header {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 10%;
+  font-weight: 450;
+  letter-spacing: 0.03rem;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  
+}
+
+#header_under {
+  font-size: 1.0rem;
+  color: rgba(255, 255, 255, 1);
+  width: 50%;
+  margin-top: 5%;
+  font-weight: 400;
+  position: relative;
+  letter-spacing: 0.05rem;
+  text-align: center;
+  left: 25%;
+}
+
+.avsnitt_header {
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 1);
+  margin: auto;
+  width: 50%;
+  padding-top: 5%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+}
+
+.under_header {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.8);
+  margin: auto;
+  width:50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  font-weight: 300;
+}
+
+#om_text {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 1);
+  margin: auto;
+  width: 50%;
+  text-align: left;
+  position: relative;
+  float: left;
+  z-index: 1;
+  font-weight: 300;
+  margin-top: 10%;
+  line-height: 150%;
+  letter-spacing: 0.05rem;
+}
+
+#fungerar_header {
+  font-size: 2.4rem;
+}
+
+#ladda_ner_header {
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+  color: rgba(255, 255, 255, 1);
+  z-index: 3;
+  margin-top: 3%;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+#footer_fot {
+  background-color: rgba(7, 24, 40, 1);
+  height: 4vh;
+}
+
+/* 
+Design-element, ex. knappar och andra grejer
+*/
+
+
+
+.div_wave{
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+.wave{
+  height: 100%; 
+  width: 100%;
+}
+#wave_1_path{
+  stroke: none; 
+  fill: rgba(84, 67, 137, 0.45);
+
+
+}
+/*
+#wave_2_path{
+  stroke: none;
+  fill:  rgba(84, 67, 137, 0.2);
+
+}
+#wave_3_path{
+  stroke: none;
+  fill:  rgba(84, 67, 137, 0.1);
+
+}
+*/
+.button {
+  background-color: rgba(84, 67, 137, 1);
+  border-radius: 20px;
+  padding: 10px 24px;
+  text-align: center;
+  color: white;
+  display: inline-block;
+  font-size: 1rem;
+  position: absolute;
+  right: 8%;
+  border-color: rgba(84, 67, 137, 1);
+  top: 3%;
+  transition-duration: 0.3s;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(84, 67, 137, 1);
+}
+
+.button:hover {
+  background-color: rgba(84, 67, 137, 0.45);
+  color: white;
+  transform: translateY(-7px);
+  border: 2px solid rgba(84, 67, 137, 0.45);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.half_circle_left {
+  width: 240px;
+  height: 480px;
+  /* as the half of the width */
+  border-bottom-right-radius: 490px;
+  /* 100px of height + 10px of border */
+  border-top-right-radius: 490px;
+  /* 100px of height + 10px of border */
+  border: 120px solid rgba(84, 67, 137, 1);
+  border-left-color: rgba(84, 67, 5, 0);
+  position: absolute;
+  bottom: -20%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+#ladda_ner_1 {
+  background: url(google_play_icon.svg);
+  width: 12%;
+  height: 65px;
+  margin-left: 38%;
+  margin-top: 1%;
+  border: rgba(84, 67, 137, 0.8);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: 0;
+}
+
+#ladda_ner_2 {
+  background: url(app_store_icon.svg);
+  width: 12%;
+  height: 65px;
+  margin-top: 1%;
+  border: rgba(84, 67, 137, 0.8);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.half_circle_right {
+  width: 240px;
+  height: 480px;
+  /* as the half of the width */
+  border-bottom-left-radius: 490px;
+  border-top-left-radius: 490px;
+  border: 120px solid rgba(84, 67, 137, 1);
+  border-right-color: rgba(84, 67, 5, 0);
+  position: absolute;
+  bottom: 15%;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  right: 0%;
+}
+
+#button_div {
+  margin-top: 5%;
+  width: 100%;
+  position: relative;
+  float: left;
+}
+
+#button_div_ladda_ner {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  bottom: 0;
+  z-index: 3;
+}
+
+#header_button_1 {
+  background-color: rgba(84, 67, 137, 1);
+  border-radius: 20px;
+  padding: 10px 24px;
+  text-align: center;
+  color: white;
+  position: relative;
+  float: left;
+  font-size: 1rem;
+  border-color: rgba(84, 67, 137, 1);
+  transition-duration: 0.3s;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(84, 67, 137, 1);
+  z-index: 2;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+#header_button_2 {
+  background-color: rgba(84, 67, 137, 0.7);
+  border-radius: 20px;
+  padding: 10px 24px;
+  text-align: center;
+  color: white;
+  position: relative;
+  float: left;
+  font-size: 1rem;
+  border-color: rgba(84, 67, 137, 0.7);
+  transition-duration: 0.3s;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(84, 67, 137, 0);
+  z-index: 1;
+  margin-left: 2%;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+
+#om_app_bild_2 {
+  right: 3%;
+  width: 35%;
+  height: auto;
+  position: absolute;
+  z-index: 3;
+}
+
+#ladda_ner_appen_bild {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+#tint {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 24, 40, 0.8);
+}
+
+#appen_bild {
+  width: 60%;
+  height: 75%;
+  position: absolute;
+  z-index: 2;
+}
+
+#hur_fungerar_bild {
+  height: 50%;
+  width: 80%;
+  margin-left: 10%;
+}
+
+
+/* 
+Funktioner
+*/
+
+.funktioner_container_small {
+  width: 100%;
+  height: 28vh;
+  margin-top: 3%;
+  position: relative;
+}
+
+.background_funktion {
+  background-color: rgba(84, 67, 137, 1);
+  width: 30%;
+  height: 100%;
+  border-radius: 5.9%;
+  margin-right: 3.3%;
+  position: relative;
+  float: left;
+  box-shadow: 0px 8px 15px 0px rgba(166, 166, 166, 1);
+}
+
+#background_funktion_3 {
+  margin-right: 0%;
+}
+
+.funktion {
+  width: 100%;
+  height: 97%;
+  top: 0;
+  border-bottom-left-radius:2%;
+  border-bottom-right-radius:2%;
+  background-color: rgba(255, 255, 255, 1);
+  border-top-left-radius: 6%;
+  border-top-right-radius: 6%;
+}
+
+.icon_funktion {
+  padding-top: 5%;
+  position: relative;
+  margin-left: 40%;
+  height: auto;
+}
+
+.header_funktion {
+  padding-top: 15%;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 900;
+}
+
+.paragraph_funktion {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 25px;
+}
+
+/* 
+Kontakta oss
+*/
+#form{
+  padding-top: 3%;
+}
+#fragor {
+  height: 100%;
+  width: auto;
+  position: relative;
+  float: left;
+}
+
+#form_name {
+  margin-left: 5%;
+  position: relative;
+  float: left;
+  margin-right: 5%;
+  height: auto;
+  width: 30%;
+  border-color: rgba(84, 67, 137, 1);
+}
+
+#form_email {
+  position: relative;
+  float: left;
+  height: auto;
+  width: 30%;
+  border-color: rgba(84, 67, 137, 1);
+
+}
+
+#form_message {
+  margin-left: 5%;
+  position: relative;
+  float: left;
+  height: auto;
+  margin-top: 3%;
+  margin-left: 5%;
+  width: 65%;
+  border-color: rgba(84, 67, 137, 1);
+}
+
+#send_message_button {
+  background-color: rgba(84, 67, 137, 1);
+  border-radius: 20px;
+  padding: 10px 24px;
+  margin-top: 3%;
+  text-align: center;
+  color: white;
+  position: relative;
+  margin-left:26%;
+  font-size: 1rem;
+  border-color: rgba(84, 67, 137, 1);
+  transition-duration: 0.3s;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(84, 67, 137, 1);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.slider_container {
+  width: 100%;
+  position: relative;
+}
+
+.range_first_value{
+float: left;
+position: relative;
+width: 50%;
+}
+.range_last_value{
+  float: right;
+  position: relative;
+
+}
+.value_div{
+  position: relative;
+  width:100%;
+  float:left;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+
+/* Modal */
+.modal{
+
+}
+
+.modal_login_button{
+  border:none;
+  background:none;
+  padding: 25px 50px;
+}
